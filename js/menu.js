@@ -1,14 +1,14 @@
-
 /*MODAL NOSOTROS*/
-const open = document.getElementById('open'); //definimos una contastante, open=document.. obetener el elemnto por el id de open
-const modal_container = document.getElementById('modal_container'); 
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal_container');
+const close = document.getElementById('close');
 
-open.addEventListener('click', () => {  //porgramamos el evento click y llamamos a una funcion
-  modal_container.classList.add('show');   // trabajmos con el elemnto modal container y su propiedad class list y le agregamos una clase show
+open.addEventListener('click', () => {
+  modal_container.classList.add('show');  
 });
 
-close.addEventListener('click', () => {  //porgramamos el evento click y llamamos a una funcion
-  modal_container.classList.remove('show'); //removemos la clase show
+close.addEventListener('click', () => {
+  modal_container.classList.remove('show');
 });
 
 const open2 = document.getElementById('open2');
@@ -48,19 +48,19 @@ close4.addEventListener('click', () => {
 });
 
 /*Menu*/
-const hamburguer = document.querySelector('.hamburger'); //creamos una contaste esto es igual a ... y esto toma la clase hamburguer
-const menu = document.querySelector('.menu-navegacion'); // creamos ...... y selleciono el menu de navegacion / ponemos el , para sellecionar a la clase
+const hamburguer = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu-navegacion');
 
-console.log(menu) // 1 elemnto consol log para el menu
-console.log(hamburguer) // 2 elemnto y otro para hamburger
+console.log(menu)
+console.log(hamburguer)
 
-hamburguer.addEventListener("click", ()=>{ //le agregamos un evento al elemnto amburguer de tipo click y quiero que cuando le den click se desate una funcion de flecha
-    menu.classList.toggle("spread") //quiero que al menu selelcione las clases selecione o quite la clase spread
+hamburguer.addEventListener("click", ()=>{
+    menu.classList.toggle("spread")
 })
 
-window.addEventListener("click",  e=>{ //quiero que cuando alguien toque la ventana dispare otra funcion de flcha 
-  if(menu.classList.contains("spread") //si el menu .clas.. tiene la clase spreed quiero que se ejecute este codigo
-      && e.target != menu && e.target != hamburguer    ){ //si menu tiene la clase spred y aparte el elemnto al que esta dandole clik es diferente al menu quier que se jecute , que al elemnto que le damos click e.target es diferente a hamburger (sino pongo esto el menu se cerrara al instante) 
-      menu.classList.toggle("spread") //(lineas arriba) basicamnt para que esto se ejecute db dar clik a algo difrenete al menu o al icono de amburguer
+window.addEventListener("click",  e=>{
+  if(menu.classList.contains("spread")
+      && e.target != menu && e.target != hamburguer    ){
+      menu.classList.toggle("spread")
       }
 })
